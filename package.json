@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,19 @@
   "bugs": {
     "url": "https://github.com/deportravel/squeeze-page/issues"
   },
-  "homepage": "https://github.com/deportravel/squeeze-page#readme"
+  "homepage": "https://github.com/deportravel/squeeze-page#readme",
+  "dependencies": {
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@mui/material": "^5.8.5",
+    "next": "^12.1.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "eslint": "^8.18.0",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-prettier": "^8.5.0"
+  }
 }
