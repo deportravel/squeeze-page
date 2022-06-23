@@ -35,7 +35,6 @@ export default function Hero() {
               // width={10}
               quality={100}
               alt={COVER_BLOCK_ALT}
-              placeholder="blur"
               priority
             />
           </Box>
@@ -121,6 +120,8 @@ export default function Hero() {
           objectFit="cover"
           quality={100}
           alt={COVER_BLOCK_ALT}
+          priority
+          placeholder="blur"
         />
       </Box>
     </>
