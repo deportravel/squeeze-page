@@ -3,7 +3,6 @@ import Image from "next/image";
 import Section from "../../shared/Section";
 import SubscribeForm from "../../shared/SubscribeForm";
 import heroImage from "./62821f05bb31bdb20d0191c4_david-marcu-VfUN94cUy4o-unsplash.jpeg";
-import logoImage from "./logo-screenshot-2022-06.png";
 
 const COVER_BLOCK_ALT = "Ciclista y paisaje";
 const TITLE = "Viajar y hacer deporte.";
@@ -27,16 +26,24 @@ export default function Hero() {
             gap: 4,
           }}
         >
-          <Box width="75%" maxWidth="200px">
-            {/* @todo: attribute the picture */}
-            <Image
-              src={logoImage}
-              layout="responsive"
-              // width={10}
-              quality={100}
-              alt={COVER_BLOCK_ALT}
-              priority
-            />
+          <Box>
+            <Typography
+              variant="h1"
+              gutterBottom
+              color="text.contrast"
+              fontSize={50}
+            >
+              depor
+              <Typography
+                component="span"
+                color="primary.main"
+                variant="h1"
+                fontSize={70}
+              >
+                {`.`}
+              </Typography>
+              travel
+            </Typography>
           </Box>
 
           <Box
@@ -46,11 +53,11 @@ export default function Hero() {
               alignItems: "center",
             }}
           >
-            <Typography variant="h1" gutterBottom color="text.contrast">
+            <Typography variant="h2" gutterBottom color="text.contrast">
               {TITLE}
             </Typography>
             <Typography
-              variant="h2"
+              variant="h3"
               role="doc-subtitle"
               gutterBottom
               color="text.contrast"

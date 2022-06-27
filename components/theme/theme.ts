@@ -27,13 +27,13 @@ const theme = {
     fontFamily: ['"Nunito Sans"', "sans-serif"].join(","),
     fontSize: 16,
     h1: {
-      fontSize: 36,
+      fontSize: 40,
     },
     h2: {
-      fontSize: 32,
+      fontSize: 36,
     },
     h3: {
-      fontSize: 28,
+      fontSize: 32,
     },
     button: {
       fontWeight: "bold",
