@@ -11,8 +11,6 @@ class MyDocument extends Document {
             }
             rel="stylesheet"
           />
-
-          <meta name="viewport" content="initial-scale=1, width=device-width" />
         </Head>
         <body>
           <Main />
