@@ -1,15 +1,17 @@
 import { Avatar, Box, Container, Typography } from "@mui/material";
-import Section from "../shared/Section";
+import Image from "next/image";
+import Section from "../../shared/Section";
+import quoteAvatarImage from "./37551468_243058243186200_3316334310134382592_n.jpeg";
 
-const NAME = "Juan G.";
+const NAME = "Antonio S.";
 const QUOTE =
-  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim ipsum vitae volutpat aliquam. Nunc feugiat gravida sapien, sed posuere est suscipit aliquet. Sed lobortis, sem nec lobortis pulvinar, magna risus gravida turpis, mattis luctus diam tellus ut erat. Morbi rutrum nibh ut ullamcorper convallis.";
+  "Hace falta una página para encontrar viajes deportivos en todo el mundo y generar una comunidad.";
 
 export default function Quotes() {
   return (
     <Section fullHeight={false}>
       <Container
-        maxWidth="md"
+        maxWidth="sm"
         sx={{
           position: "relative",
           display: "flex",
@@ -24,10 +26,17 @@ export default function Quotes() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 6,
+            gap: 4,
           }}
         >
-          <Avatar sx={{ width: "4rem", height: "4rem" }}>JH</Avatar>
+          <Avatar sx={{ width: "6rem", height: "6rem" }}>
+            <Image
+              src={quoteAvatarImage}
+              alt="Avatar"
+              layout="fill"
+              objectFit="cover"
+            />
+          </Avatar>
           <Typography variant="h5" component="p">
             {NAME}
           </Typography>
