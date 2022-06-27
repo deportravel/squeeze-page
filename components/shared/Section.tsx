@@ -26,6 +26,7 @@ export default function Section({
         alignItems: "center",
         backgroundColor,
         zIndex: 1,
+        overflow: "hidden",
       }}
       maxWidth={false}
       component={component}

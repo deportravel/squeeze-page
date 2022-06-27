@@ -7,6 +7,7 @@ import Subscribe from "../components/sections/Subscribe";
 import AppFooter from "../components/sections/AppFooter";
 import AppThemeProvider from "../components/theme/AppThemeProvider";
 import FixedBackgroundImage from "../components/shared/FixedBackgroundImage";
+import { Divider } from "@mui/material";
 
 const TITLE = "depor.travel - Viajar y hacer deporte";
 
@@ -19,6 +20,9 @@ function SqueezePage() {
       <CssBaseline />
       <AppThemeProvider>
         <Hero />
+
+        <Divider sx={{ zIndex: 2 }} />
+
         <Quotes />
         <Subscribe />
         <AppFooter />

@@ -15,7 +15,7 @@ export default function Subscribe() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          py: 12,
+          py: { xs: 6, sm: 12 },
           zIndex: 2,
         }}
       >

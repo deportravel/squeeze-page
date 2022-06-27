@@ -1,4 +1,10 @@
-import { createTheme } from "@mui/material";
+import {
+  alpha,
+  createTheme,
+  darken,
+  lighten,
+  responsiveFontSizes,
+} from "@mui/material";
 
 declare module "@mui/material/styles" {
   // eslint-disable-next-line
@@ -7,13 +13,18 @@ declare module "@mui/material/styles" {
   }
 }
 
+const primaryMainColor = "rgb(249, 46, 42)";
+const secondaryMainColor = "rgb(134, 132, 132)";
+const tonalOffset = 0.2;
+
 const theme = {
   palette: {
+    tonalOffset,
     primary: {
-      main: "rgb(249, 46, 42)",
+      main: primaryMainColor,
     },
     secondary: {
-      main: "rgb(134, 132, 132)",
+      main: secondaryMainColor,
     },
     background: {
       default: "#fff",
@@ -22,6 +33,7 @@ const theme = {
     text: {
       contrast: "#fff",
     },
+    divider: "rgb(244, 244, 244)",
   },
   typography: {
     fontFamily: ['"Nunito Sans"', "sans-serif"].join(","),
@@ -35,6 +47,12 @@ const theme = {
     h3: {
       fontSize: 32,
     },
+    h4: {
+      fontSize: 28,
+    },
+    h5: {
+      fontSize: 24,
+    },
     button: {
       fontWeight: "bold",
     },
@@ -43,21 +61,44 @@ const theme = {
     MuiOutlinedInput: {
       styleOverrides: {
         // @todo: figure out how to change the border color when active
-        // root: {
-        //   "&$focused $notchedOutline": {
-        //     borderColor: "green",
-        //     borderWidth: 2,
-        //   },
-        // },
+        root: {
+          "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: secondaryMainColor,
+            color: secondaryMainColor,
+          },
+        },
         focused: {},
         notchedOutline: {
-          borderColor: "secondary.main",
+          borderColor: lighten(secondaryMainColor, tonalOffset),
+        },
+      },
+    },
+    MuiButton: {
+      defaultProps: {
+        disableRipple: true,
+      },
+      styleOverrides: {
+        contained: {
+          "&:active": {
+            backgroundColor: darken(primaryMainColor, tonalOffset * 2),
+          },
+          "&:focus-visible": {
+            backgroundColor: darken(primaryMainColor, tonalOffset),
+          },
+        },
+        outlined: {
+          "&:active": {
+            backgroundColor: alpha(primaryMainColor, 0.1),
+          },
+          "&:focus-visible": {
+            backgroundColor: alpha(primaryMainColor, 0.1),
+          },
         },
       },
     },
   },
 };
 
-const muiTheme = createTheme(theme);
+const muiTheme = responsiveFontSizes(createTheme(theme));
 
 export default muiTheme;

@@ -15,7 +15,8 @@ export default function Quotes() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          py: 12,
+          pt: { xs: 4, sm: 8 },
+          pb: { xs: 6, sm: 12 },
         }}
       >
         <Box
@@ -23,12 +24,14 @@ export default function Quotes() {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
-            gap: 3,
+            gap: 6,
           }}
         >
-          <Avatar>JH</Avatar>
-          <Typography variant="body1">{NAME}</Typography>
-          <Typography variant="body2">{QUOTE}</Typography>
+          <Avatar sx={{ width: "4rem", height: "4rem" }}>JH</Avatar>
+          <Typography variant="h5" component="p">
+            {NAME}
+          </Typography>
+          <Typography variant="body1">{QUOTE}</Typography>
         </Box>
       </Container>
     </Section>
