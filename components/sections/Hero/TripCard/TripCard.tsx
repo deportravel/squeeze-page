@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { Box, Button, Paper, Typography } from "@mui/material";
 import Image, { StaticImageData } from "next/image";
 
@@ -7,8 +6,15 @@ import DirectionsRunRoundedIcon from "@mui/icons-material/DirectionsRunRounded";
 import PublicRoundedIcon from "@mui/icons-material/PublicRounded";
 import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
 import SellRoundedIcon from "@mui/icons-material/SellRounded";
+import { useEffect, useState } from "react";
 
-function InformationItem({ icon, text }: { icon: ReactNode; text: string }) {
+function InformationItem({
+  icon,
+  text,
+}: {
+  icon: React.ReactNode;
+  text: string;
+}) {
   return (
     <Box sx={{ display: "flex", alignItems: "center", gap: 0.5, pb: 1 }}>
       {icon}
@@ -16,6 +22,9 @@ function InformationItem({ icon, text }: { icon: ReactNode; text: string }) {
     </Box>
   );
 }
+
+const BUTTON_LABEL = "Más info";
+const BUTTON_LABEL_CLICKED = "Próximamente...";
 
 export default function TripCard({
   title,
@@ -34,6 +43,18 @@ export default function TripCard({
   dates: string;
   price: string;
 }) {
+  const [infoRequested, setInfoRequested] = useState(false);
+  useEffect(() => {
+    if (infoRequested) {
+      const timeout = setTimeout(() => {
+        setInfoRequested(false);
+      }, 3000);
+      return () => {
+        clearTimeout(timeout);
+      };
+    }
+  }, [infoRequested]);
+
   return (
     <Paper elevation={5}>
       <Box
@@ -77,8 +98,13 @@ export default function TripCard({
         </Box>
 
         <Box>
-          <Button variant="outlined" fullWidth>
-            Más info
+          <Button
+            variant="outlined"
+            color={infoRequested ? "secondary" : "primary"}
+            fullWidth
+            onClick={() => setInfoRequested(true)}
+          >
+            {infoRequested ? BUTTON_LABEL_CLICKED : BUTTON_LABEL}
           </Button>
         </Box>
       </Box>
