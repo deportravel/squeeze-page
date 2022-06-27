@@ -13,7 +13,7 @@ import Logo from "./Logo";
 
 const TITLE = "Viajar y hacer deporte.";
 const SUBTITLE = "Tus dos pasiones en una sola web.";
-const DESCRIPTION_2 = "Apúntate y te avisaremos el día del lanzamiento!";
+const DESCRIPTION_2 = "¡Apúntate y te avisaremos el día del lanzamiento!";
 
 export default function Hero() {
   const smallViewport = useMediaQuery((theme: Theme) =>
