@@ -6,6 +6,7 @@ import Quotes from "../components/sections/Quotes";
 import Subscribe from "../components/sections/Subscribe";
 import AppFooter from "../components/sections/AppFooter";
 import AppThemeProvider from "../components/theme/AppThemeProvider";
+import FixedBackgroundImage from "../components/shared/FixedBackgroundImage";
 
 const TITLE = "depor.travel - Viajar y hacer deporte";
 
@@ -21,6 +22,8 @@ function SqueezePage() {
         <Quotes />
         <Subscribe />
         <AppFooter />
+
+        <FixedBackgroundImage />
       </AppThemeProvider>
     </>
   );

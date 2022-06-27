@@ -25,6 +25,7 @@ export default function Section({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor,
+        zIndex: 1,
       }}
       maxWidth={false}
       component={component}
