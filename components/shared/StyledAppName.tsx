@@ -1,13 +1,8 @@
 import { Typography } from "@mui/material";
 
-export default function Logo() {
+export default function StyledAppName() {
   return (
-    <Typography
-      variant="h1"
-      gutterBottom
-      fontSize={{ xs: 45, sm: 60 }}
-      fontWeight="bold"
-    >
+    <Typography variant="inherit" fontWeight="bold" component="span">
       depor
       <Typography
         component="span"

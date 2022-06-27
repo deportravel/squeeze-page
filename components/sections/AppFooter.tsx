@@ -1,12 +1,13 @@
 import { Typography } from "@mui/material";
 import Section from "../shared/Section";
-
-const COPYRIGHT_NOTE = "© 2022 depor.travel";
+import StyledAppName from "../shared/StyledAppName";
 
 export default function AppFooter() {
   return (
     <Section fullHeight={false} component="footer">
-      <Typography variant="body2">{COPYRIGHT_NOTE}</Typography>
+      <Typography variant="body2">
+        © 2022 <StyledAppName />
+      </Typography>
     </Section>
   );
 }

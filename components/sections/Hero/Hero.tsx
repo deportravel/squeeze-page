@@ -6,14 +6,13 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import Section from "../../shared/Section";
+import StyledAppName from "../../shared/StyledAppName";
 import SubscribeForm from "../../shared/SubscribeForm";
 import Carousel from "./Carousel";
 import Logo from "./Logo";
 
 const TITLE = "Viajar y hacer deporte.";
 const SUBTITLE = "Tus dos pasiones en una sola web.";
-const DESCRIPTION =
-  "En depor.travel encontrarás multitud de viajes de carácter 100% deportivo. Si buscas practicar tus deportes favoritos en lugares nuevos, estás de enhorabuena.";
 const DESCRIPTION_2 = "Apúntate y te avisaremos el día del lanzamiento!";
 
 export default function Hero() {
@@ -86,7 +85,9 @@ export default function Hero() {
               }}
             >
               <Typography variant="body1" paragraph width="100%">
-                {DESCRIPTION}
+                {`En `}
+                <StyledAppName />
+                {` encontrarás multitud de viajes de carácter 100% deportivo. Si buscas practicar tus deportes favoritos en lugares nuevos, estás de enhorabuena.`}
               </Typography>
               <Typography variant="body1" paragraph width="100%">
                 {DESCRIPTION_2}
