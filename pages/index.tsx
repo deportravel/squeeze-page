@@ -16,6 +16,7 @@ function SqueezePage() {
     <>
       <Head>
         <title>{TITLE}</title>
+        <link rel="canonical" href="https://depor.travel" />
       </Head>
       <CssBaseline />
       <AppThemeProvider>
