@@ -11,6 +11,8 @@ function MyApp({ Component, pageProps }) {
 
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png" />
+
+        <meta name="robots" content="all" />
       </Head>
       <Component {...pageProps} />
     </>
