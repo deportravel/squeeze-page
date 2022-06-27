@@ -78,7 +78,7 @@ const theme = {
         disableRipple: true,
       },
       styleOverrides: {
-        contained: {
+        containedPrimary: {
           "&:active": {
             backgroundColor: darken(primaryMainColor, tonalOffset * 2),
           },
@@ -86,7 +86,7 @@ const theme = {
             backgroundColor: darken(primaryMainColor, tonalOffset),
           },
         },
-        outlined: {
+        outlinedPrimary: {
           "&:active": {
             backgroundColor: alpha(primaryMainColor, 0.1),
           },
