@@ -4,8 +4,7 @@ import Section from "../../shared/Section";
 import quoteAvatarImage from "./37551468_243058243186200_3316334310134382592_n.jpeg";
 
 const NAME = "Antonio S.";
-const QUOTE =
-  "Hace falta una página para encontrar viajes deportivos en todo el mundo y generar una comunidad.";
+const QUOTE = `"Hace falta una página para encontrar viajes deportivos en todo el mundo y generar una comunidad."`;
 
 export default function Quotes() {
   return (
