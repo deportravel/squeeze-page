@@ -27,6 +27,7 @@ const theme = {
       main: secondaryMainColor,
     },
     background: {
+      shaded: "#f5f5f5",
       default: "#fff",
       paper: "#fff",
     },
