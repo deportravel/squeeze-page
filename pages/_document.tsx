@@ -1,4 +1,7 @@
+import getConfig from "next/config";
 import Document, { Html, Head, Main, NextScript } from "next/document";
+
+const { publicRuntimeConfig } = getConfig();
 
 class MyDocument extends Document {
   render() {
@@ -11,6 +14,15 @@ class MyDocument extends Document {
             }
             rel="stylesheet"
           />
+          {publicRuntimeConfig.UMAMI_WEBSITE_ID && (
+            <script
+              async
+              defer
+              data-website-id={publicRuntimeConfig.UMAMI_WEBSITE_ID}
+              data-domains="depor.travel"
+              src="https://umami-pvn48eb4t-guillermodlpa.vercel.app/umami.js"
+            ></script>
+          )}
         </Head>
         <body>
           <Main />
