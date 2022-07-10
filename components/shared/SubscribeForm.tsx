@@ -1,4 +1,4 @@
-import { Alert, AlertTitle, Box, TextField, Typography } from "@mui/material";
+import { Alert, AlertTitle, Box, TextField } from "@mui/material";
 import LoadingButton from "@mui/lab/LoadingButton";
 import getConfig from "next/config";
 import { FormEvent, useRef, useState } from "react";
@@ -41,7 +41,7 @@ export default function SubscribeForm() {
     <>
       <Box
         component="form"
-        sx={{ display: "flex", gap: 2, alignItems: "center", flexWrap: 1 }}
+        sx={{ display: "flex", gap: 2, alignItems: "stretch", flexWrap: 1 }}
         method="POST"
         action={publicRuntimeConfig.FORM_POST_ACTION}
         onSubmit={handleSubmit}

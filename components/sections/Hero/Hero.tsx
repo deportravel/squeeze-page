@@ -10,6 +10,7 @@ import StyledAppName from "../../shared/StyledAppName";
 import SubscribeForm from "../../shared/SubscribeForm";
 import Carousel from "./Carousel";
 import Logo from "./Logo";
+import MoreContentArrow from "./MoreContentArrow";
 
 const TITLE = "Viajar y hacer deporte.";
 const SUBTITLE = "Tus dos pasiones en una sola web.";
@@ -21,14 +22,14 @@ export default function Hero() {
   );
 
   return (
-    <Section fullHeight>
+    <Section almostFullHeight>
       <Container
         maxWidth="md"
         sx={{
           position: "relative",
           display: "flex",
-          flexDirection: "row",
-          alignItems: "flex-start",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
         <Box
@@ -108,6 +109,8 @@ export default function Hero() {
             </Box>
           )}
         </Box>
+
+        <MoreContentArrow />
       </Container>
     </Section>
   );

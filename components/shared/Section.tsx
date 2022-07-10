@@ -2,12 +2,12 @@ import { Container } from "@mui/material";
 import { ElementType, ReactNode } from "react";
 
 export default function Section({
-  fullHeight,
+  almostFullHeight,
   component = "div",
   backgroundColor = "background.default",
   children,
 }: {
-  fullHeight: boolean;
+  almostFullHeight?: boolean;
   component?: ElementType;
   children: ReactNode;
   backgroundColor?: string;
@@ -19,7 +19,7 @@ export default function Section({
         py: 6,
         px: 3,
         m: 0,
-        minHeight: fullHeight ? "100vh" : undefined,
+        minHeight: almostFullHeight ? "90vh" : undefined,
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",

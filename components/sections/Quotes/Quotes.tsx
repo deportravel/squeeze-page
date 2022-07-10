@@ -8,7 +8,7 @@ const QUOTE = `"Hace falta una página para encontrar viajes deportivos en todo 
 
 export default function Quotes() {
   return (
-    <Section fullHeight={false} backgroundColor={"background.shaded"}>
+    <Section backgroundColor={"background.shaded"}>
       <Container
         maxWidth="sm"
         sx={{

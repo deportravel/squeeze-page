@@ -26,7 +26,7 @@ const teamMembers = [
     linkedInProfileUrl: "https://www.linkedin.com/in/antoniogonzalezsanchis/",
   },
   {
-    name: "Ali DeCastro",
+    name: "Allie DeCastro",
     role: "Design",
     image: allieTeamMemberImage,
     linkedInProfileUrl: "https://www.linkedin.com/in/allie-decastro-b26a9452/",
@@ -41,9 +41,9 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <Section fullHeight={false}>
+    <Section>
       <Container
-        maxWidth="sm"
+        maxWidth="md"
         sx={{
           position: "relative",
           display: "flex",
@@ -60,21 +60,56 @@ export default function Team() {
             flexDirection: "column",
             alignItems: "center",
             gap: 4,
+            width: "100%",
           }}
         >
           <Typography variant="h5" component="p">
             {TEAM_HEADLINE}
           </Typography>
 
-          <List>
+          <List
+            sx={{
+              display: "grid",
+              gridTemplateColumns: ["1fr", undefined, "1fr 1fr 1fr"],
+              gridTemplateRows: ["1fr 1fr 1fr", undefined, "1fr"],
+            }}
+          >
             {teamMembers.map((teamMember) => (
               <ListItem
                 key={teamMember.name}
-                secondaryAction={
+                sx={{ display: "flex", flexDirection: "column", flexGrow: 1 }}
+              >
+                <ListItemAvatar>
+                  <Avatar sx={{ width: 96, height: 96 }}>
+                    <Image
+                      src={teamMember.image}
+                      alt={`Avatar of ${teamMember.name}`}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </Avatar>
+                </ListItemAvatar>
+
+                <Box
+                  mr={{
+                    xs: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: 2,
+                  }}
+                >
+                  <ListItemText
+                    sx={{ whiteSpace: "nowrap" }}
+                    primary={teamMember.name}
+                    secondary={teamMember.role}
+                  />
                   <Link
                     href={teamMember.linkedInProfileUrl}
                     color="secondary"
                     sx={{
+                      flexShrink: 0,
+                      marginTop: 1,
                       transition: "opacity 0.25s ease",
                       opacity: 1,
                       "&:hover": {
@@ -84,23 +119,6 @@ export default function Team() {
                   >
                     <LinkedInLogo />
                   </Link>
-                }
-              >
-                <ListItemAvatar>
-                  <Avatar>
-                    <Image
-                      src={teamMember.image}
-                      alt="Avatar"
-                      layout="fill"
-                      objectFit="cover"
-                    />
-                  </Avatar>
-                </ListItemAvatar>
-                <Box mr={{ xs: 1, sm: 2 }}>
-                  <ListItemText
-                    primary={teamMember.name}
-                    secondary={teamMember.role}
-                  />
                 </Box>
               </ListItem>
             ))}

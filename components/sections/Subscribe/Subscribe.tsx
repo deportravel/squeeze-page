@@ -7,7 +7,7 @@ const TEXT = "Te avisaremos el día del lanzamiento";
 
 export default function Subscribe() {
   return (
-    <Section fullHeight={false} backgroundColor="transparent">
+    <Section backgroundColor="transparent">
       <Container
         maxWidth="md"
         sx={{
