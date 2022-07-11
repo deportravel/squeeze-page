@@ -72,6 +72,7 @@ export default function Team() {
               display: "grid",
               gridTemplateColumns: ["1fr", "1fr 1fr 1fr"],
               gridTemplateRows: ["1fr 1fr 1fr", "1fr"],
+              gap: [4, null],
             }}
           >
             {teamMembers.map((teamMember) => (
