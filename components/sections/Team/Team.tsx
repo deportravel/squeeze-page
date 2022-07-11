@@ -70,8 +70,8 @@ export default function Team() {
           <List
             sx={{
               display: "grid",
-              gridTemplateColumns: ["1fr", undefined, "1fr 1fr 1fr"],
-              gridTemplateRows: ["1fr 1fr 1fr", undefined, "1fr"],
+              gridTemplateColumns: ["1fr", "1fr 1fr 1fr"],
+              gridTemplateRows: ["1fr 1fr 1fr", "1fr"],
             }}
           >
             {teamMembers.map((teamMember) => (
