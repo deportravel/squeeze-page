@@ -4,15 +4,15 @@ import { keyframes } from "@emotion/react";
 
 const bounce = keyframes`
   0% {
-    opacity: 0.1;
+    opacity: 0.7;
     transform: translateY(0%);
   }
   50% {
-    opacity: 0.3;
+    opacity: 1;
     transform: translateY(50%);
   }
   100% {
-    opacity: 0.1;
+    opacity: 0.7;
     transform: translateY(0%);
   }
 `;
@@ -20,7 +20,7 @@ const bounce = keyframes`
 export default function MoreContentArrow() {
   return (
     <Box
-      sx={{ animation: `${bounce} 2s infinite ease` }}
+      sx={{ animation: `${bounce} 2s infinite ease`, color: "secondary.main" }}
       role="presentation"
       mt={[4, undefined, 0]}
     >
