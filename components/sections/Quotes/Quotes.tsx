@@ -39,6 +39,7 @@ const ColorMask = () => (
       backgroundPosition: "0 0, 50% 50%",
       backgroundSize: "auto,cover",
       zIndex: 1,
+      backdropFilter: "blur(5px)",
     }}
   />
 );
