@@ -22,6 +22,7 @@ export default function FixedBackgroundImage() {
         src={backgroundImage}
         layout="fill"
         objectFit="cover"
+        objectPosition="60% center"
         quality={100}
         alt={COVER_BLOCK_ALT}
         priority
