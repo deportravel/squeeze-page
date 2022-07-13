@@ -3,6 +3,7 @@ import Image from "next/image";
 import Section from "../../shared/Section";
 import avatarImageGerardIzquierdo from "./avatar_gerard_izquierdo.png";
 import avatarImageRogerFornas from "./avatar_roger_fornas.png";
+import avatarImageAnnettKowalski from "./avatar_annett_kowalski.png";
 
 const QUOTES = [
   {
@@ -16,6 +17,12 @@ const QUOTES = [
     image: avatarImageRogerFornas,
     content:
       "He visitado varios países para hacer rutas de montaña, ya sea andando, ascendiendo a picos, corriendo o con bici de montaña. Tardaba semanas hasta encontrar opciones interesantes. ¿Dónde estaba depor.travel hasta ahora?",
+  },
+  {
+    name: "Annett Kowalski",
+    image: avatarImageAnnettKowalski,
+    content:
+      "Soy una apasionada del deporte en general, y siempre me gusta descubrir deportes nuevos que nunca he hecho antes. Si a eso le sumo el viajar, la combinación es perfecta.",
   },
 ];
 
@@ -50,7 +57,7 @@ export default function Quotes() {
             <Typography variant="subtitle1" component="p" gutterBottom>
               {name}
             </Typography>
-            <Typography variant="body1">{`"${content}"`}</Typography>
+            <Typography variant="body2">{`"${content}"`}</Typography>
           </Box>
         ))}
       </Container>
