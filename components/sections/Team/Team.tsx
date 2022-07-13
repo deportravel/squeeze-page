@@ -104,6 +104,8 @@ export default function Team() {
                     sx={{ whiteSpace: "nowrap" }}
                     primary={teamMember.name}
                     secondary={teamMember.role}
+                    primaryTypographyProps={{ textAlign: "center" }}
+                    secondaryTypographyProps={{ textAlign: "center" }}
                   />
                   <Link
                     href={teamMember.linkedInProfileUrl}

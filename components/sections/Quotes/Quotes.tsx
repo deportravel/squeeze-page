@@ -54,10 +54,18 @@ export default function Quotes() {
             <Avatar sx={{ width: "8rem", height: "8rem" }}>
               <Image src={image} alt="Avatar" layout="fill" objectFit="cover" />
             </Avatar>
-            <Typography variant="subtitle1" component="p" gutterBottom>
+            <Typography
+              variant="subtitle1"
+              component="p"
+              gutterBottom
+              textAlign="center"
+            >
               {name}
             </Typography>
-            <Typography variant="body2">{`"${content}"`}</Typography>
+            <Typography
+              variant="body2"
+              textAlign="center"
+            >{`"${content}"`}</Typography>
           </Box>
         ))}
       </Container>
