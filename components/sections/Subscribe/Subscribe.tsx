@@ -5,6 +5,23 @@ import SubscribeForm from "../../shared/SubscribeForm";
 const HEADLINE = "Apúntate";
 const TEXT = "Te avisaremos el día del lanzamiento";
 
+const ColorMask = () => (
+  <Box
+    sx={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background:
+        "linear-gradient(135deg,rgba(30,33,33,.70) 0%, rgba(32,32,32,.3) 100%)",
+      backgroundPosition: "0 0, 50% 50%",
+      backgroundSize: "auto,cover",
+      zIndex: 1,
+    }}
+  />
+);
+
 export default function Subscribe() {
   return (
     <Section backgroundColor="transparent">
@@ -38,20 +55,7 @@ export default function Subscribe() {
         </Box>
       </Container>
 
-      <Box
-        sx={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          background:
-            "linear-gradient(135deg,rgba(30,33,33,.70) 0%, rgba(32,32,32,.3) 100%)",
-          backgroundPosition: "0 0, 50% 50%",
-          backgroundSize: "auto,cover",
-          zIndex: 1,
-        }}
-      />
+      <ColorMask />
     </Section>
   );
 }

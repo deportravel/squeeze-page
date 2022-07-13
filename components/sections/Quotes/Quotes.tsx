@@ -26,9 +26,26 @@ const QUOTES = [
   },
 ];
 
+const ColorMask = () => (
+  <Box
+    sx={{
+      position: "absolute",
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      background:
+        "linear-gradient(135deg,rgba(255, 255, 255,0.6) 0%, rgba(255,255,255,.9) 100%)",
+      backgroundPosition: "0 0, 50% 50%",
+      backgroundSize: "auto,cover",
+      zIndex: 1,
+    }}
+  />
+);
+
 export default function Quotes() {
   return (
-    <Section backgroundColor={"background.shaded"}>
+    <Section backgroundColor={"transparent"}>
       <Container
         maxWidth="lg"
         sx={{
@@ -39,6 +56,7 @@ export default function Quotes() {
           pt: { xs: 4, sm: 8 },
           pb: { xs: 6, sm: 12 },
           gap: { xs: 6, sm: 8 },
+          zIndex: 2,
         }}
       >
         {QUOTES.map(({ name, content, image }) => (
@@ -69,6 +87,8 @@ export default function Quotes() {
           </Box>
         ))}
       </Container>
+
+      <ColorMask />
     </Section>
   );
 }
