@@ -7,6 +7,12 @@ import avatarImageAnnettKowalski from "./avatar_annett_kowalski.png";
 
 const QUOTES = [
   {
+    name: "Annett Kowalski",
+    image: avatarImageAnnettKowalski,
+    content:
+      "Soy una apasionada del deporte en general, y siempre me gusta descubrir deportes nuevos que nunca he hecho antes. Si a eso le sumo el viajar, la combinación es perfecta.",
+  },
+  {
     name: "Gerard Izquierdo",
     image: avatarImageGerardIzquierdo,
     content:
@@ -17,12 +23,6 @@ const QUOTES = [
     image: avatarImageRogerFornas,
     content:
       "He visitado varios países para hacer rutas de montaña, ya sea andando, ascendiendo a picos, corriendo o con bici de montaña. Tardaba semanas hasta encontrar opciones interesantes. ¿Dónde estaba depor.travel hasta ahora?",
-  },
-  {
-    name: "Annett Kowalski",
-    image: avatarImageAnnettKowalski,
-    content:
-      "Soy una apasionada del deporte en general, y siempre me gusta descubrir deportes nuevos que nunca he hecho antes. Si a eso le sumo el viajar, la combinación es perfecta.",
   },
 ];
 
