@@ -104,7 +104,10 @@ export default function Team() {
                     sx={{ whiteSpace: "nowrap" }}
                     primary={teamMember.name}
                     secondary={teamMember.role}
-                    primaryTypographyProps={{ textAlign: "center" }}
+                    primaryTypographyProps={{
+                      textAlign: "center",
+                      fontWeight: "bold",
+                    }}
                     secondaryTypographyProps={{ textAlign: "center" }}
                   />
                   <Link

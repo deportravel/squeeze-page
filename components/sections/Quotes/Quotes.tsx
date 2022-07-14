@@ -35,7 +35,7 @@ const ColorMask = () => (
       right: 0,
       bottom: 0,
       background:
-        "linear-gradient(135deg,rgba(255, 255, 255,0.6) 0%, rgba(255,255,255,.9) 100%)",
+        "linear-gradient(135deg,rgba(255, 255, 255,0.8) 0%, rgba(255,255,255,0.95) 100%)",
       backgroundPosition: "0 0, 50% 50%",
       backgroundSize: "auto,cover",
       zIndex: 1,
@@ -76,8 +76,8 @@ export default function Quotes() {
             <Typography
               variant="subtitle1"
               component="p"
-              gutterBottom
               textAlign="center"
+              fontWeight="bold"
             >
               {name}
             </Typography>
