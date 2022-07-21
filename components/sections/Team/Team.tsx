@@ -113,6 +113,8 @@ export default function Team() {
                   <Link
                     href={teamMember.linkedInProfileUrl}
                     color="secondary"
+                    rel="noopener"
+                    target="_blank"
                     sx={{
                       flexShrink: 0,
                       marginTop: 1,
