@@ -13,7 +13,7 @@ declare module "@mui/material/styles" {
   }
 }
 
-const primaryMainColor = "rgb(249, 46, 42)";
+const primaryMainColor = "rgb(223, 83, 53)";
 const secondaryMainColor = "rgb(134, 132, 132)";
 const tonalOffset = 0.2;
 
