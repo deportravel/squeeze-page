@@ -11,7 +11,7 @@ import Team from "../components/sections/Team";
 
 const TITLE = "depor.travel - Viajar y hacer deporte";
 const DESCRIPTION =
-  "Multitud de viajes de carácter 100% deportivo. Si buscas practicar tus deportes favoritos en lugares nuevos, estás de enhorabuena.";
+  "Multitud de viajes deportivos por todo el mundo. Si buscas practicar tus deportes favoritos en lugares nuevos, estás de enhorabuena.";
 
 function SqueezePage() {
   return (

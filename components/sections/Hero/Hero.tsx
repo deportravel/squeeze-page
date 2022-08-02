@@ -88,7 +88,7 @@ export default function Hero() {
               <Typography variant="body1" paragraph width="100%">
                 {`En `}
                 <StyledAppName />
-                {` encontrarás multitud de viajes de carácter 100% deportivo. Si buscas practicar tus deportes favoritos en lugares nuevos, estás de enhorabuena.`}
+                {` encontrarás multitud de viajes deportivos por todo el mundo. Si buscas practicar tus deportes favoritos en lugares nuevos, estás de enhorabuena.`}
               </Typography>
               <Typography variant="body1" paragraph width="100%">
                 {DESCRIPTION_2}
