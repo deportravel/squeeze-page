@@ -15,31 +15,33 @@ import antonioTeamMemberImage from "./antonio.jpeg";
 import allieTeamMemberImage from "./allie.jpeg";
 import guillermoTeamMemberImage from "./guillermo.jpg";
 import LinkedInLogo from "./LinkedInLogo";
-
-const TEAM_HEADLINE = "¿Quiénes somos?";
-
-const teamMembers = [
-  {
-    name: "Antonio Sanchis",
-    role: "Product & Marketing",
-    image: antonioTeamMemberImage,
-    linkedInProfileUrl: "https://www.linkedin.com/in/antoniogonzalezsanchis/",
-  },
-  {
-    name: "Allie DeCastro",
-    role: "Design",
-    image: allieTeamMemberImage,
-    linkedInProfileUrl: "https://www.linkedin.com/in/allie-decastro-b26a9452/",
-  },
-  {
-    name: "Guillermo de la Puente",
-    role: "Technology",
-    image: guillermoTeamMemberImage,
-    linkedInProfileUrl: "https://www.linkedin.com/in/guillermodlpa/",
-  },
-];
+import { useTranslation } from "next-i18next";
 
 export default function Team() {
+  const { t } = useTranslation("team");
+
+  const teamMembers = [
+    {
+      name: "Antonio Sanchis",
+      role: t("antonioTitle"),
+      image: antonioTeamMemberImage,
+      linkedInProfileUrl: "https://www.linkedin.com/in/antoniogonzalezsanchis/",
+    },
+    {
+      name: "Allie DeCastro",
+      role: t("allieTitle"),
+      image: allieTeamMemberImage,
+      linkedInProfileUrl:
+        "https://www.linkedin.com/in/allie-decastro-b26a9452/",
+    },
+    {
+      name: "Guillermo de la Puente",
+      role: t("guillermoTitle"),
+      image: guillermoTeamMemberImage,
+      linkedInProfileUrl: "https://www.linkedin.com/in/guillermodlpa/",
+    },
+  ];
+
   return (
     <Section>
       <Container
@@ -64,7 +66,7 @@ export default function Team() {
           }}
         >
           <Typography variant="h5" component="p">
-            {TEAM_HEADLINE}
+            {t("headline")}
           </Typography>
 
           <List

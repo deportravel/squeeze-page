@@ -1,9 +1,7 @@
 import { Box, Container, Typography } from "@mui/material";
+import { useTranslation } from "next-i18next";
 import Section from "../../shared/Section";
 import SubscribeForm from "../../shared/SubscribeForm";
-
-const HEADLINE = "Apúntate";
-const TEXT = "Te avisaremos el día del lanzamiento";
 
 const ColorMask = () => (
   <Box
@@ -23,6 +21,8 @@ const ColorMask = () => (
 );
 
 export default function Subscribe() {
+  const { t } = useTranslation("subscribeBlock");
+
   return (
     <Section backgroundColor="transparent">
       <Container
@@ -45,10 +45,10 @@ export default function Subscribe() {
           }}
         >
           <Typography variant="h2" color="text.contrast">
-            {HEADLINE}
+            {t("headline")}
           </Typography>
           <Typography variant="body1" color="text.contrast">
-            {TEXT}
+            {t("body")}
           </Typography>
 
           <SubscribeForm />

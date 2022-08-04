@@ -5,6 +5,7 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
+import { Trans, useTranslation } from "next-i18next";
 import Section from "../../shared/Section";
 import StyledAppName from "../../shared/StyledAppName";
 import SubscribeForm from "../../shared/SubscribeForm";
@@ -12,11 +13,9 @@ import Carousel from "./Carousel";
 import Logo from "./Logo";
 import MoreContentArrow from "./MoreContentArrow";
 
-const TITLE = "Viajar y hacer deporte.";
-const SUBTITLE = "Tus dos pasiones en una sola web.";
-const DESCRIPTION_2 = "¡Apúntate y te avisaremos el día del lanzamiento!";
-
 export default function Hero() {
+  const { t } = useTranslation("hero");
+
   const smallViewport = useMediaQuery((theme: Theme) =>
     theme.breakpoints.down("sm")
   );
@@ -59,9 +58,9 @@ export default function Hero() {
               }}
             >
               <Typography variant="h2">
-                {TITLE}
+                {t("headline1")}
                 <br />
-                {SUBTITLE}
+                {t("headline2")}
               </Typography>
             </Box>
 
@@ -86,12 +85,14 @@ export default function Hero() {
               }}
             >
               <Typography variant="body1" paragraph width="100%">
-                {`En `}
-                <StyledAppName />
-                {` encontrarás multitud de viajes deportivos por todo el mundo. Si buscas practicar tus deportes favoritos en lugares nuevos, estás de enhorabuena.`}
+                <Trans
+                  ns="hero"
+                  i18nKey="body1"
+                  components={{ StyledAppName: <StyledAppName /> }}
+                />
               </Typography>
               <Typography variant="body1" paragraph width="100%">
-                {DESCRIPTION_2}
+                {t("body2")}
               </Typography>
             </Box>
 

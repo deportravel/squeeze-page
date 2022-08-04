@@ -1,5 +1,6 @@
 import Head from "next/head";
 import CssBaseline from "@mui/material/CssBaseline";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Hero from "../components/sections/Hero";
 import Quotes from "../components/sections/Quotes";
@@ -36,3 +37,11 @@ function SqueezePage() {
 }
 
 export default SqueezePage;
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale)),
+    },
+  };
+}

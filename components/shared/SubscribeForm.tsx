@@ -3,10 +3,9 @@ import LoadingButton from "@mui/lab/LoadingButton";
 import getConfig from "next/config";
 import { FormEvent, useRef, useState } from "react";
 import CelebrationRoundedIcon from "@mui/icons-material/CelebrationRounded";
+import { Trans, useTranslation } from "next-i18next";
 
 const { publicRuntimeConfig } = getConfig();
-
-const BUTTON_LABEL = "Avísame";
 
 enum SubmitStatus {
   IDDLE,
@@ -16,6 +15,8 @@ enum SubmitStatus {
 }
 
 export default function SubscribeForm() {
+  const { t } = useTranslation("subscribeForm");
+
   const [status, setStatus] = useState(SubmitStatus.IDDLE);
   const [email, setEmail] = useState("");
   const form = useRef();
@@ -52,7 +53,7 @@ export default function SubscribeForm() {
             <TextField
               type="email"
               label="Email"
-              name="Email"
+              name={t("emailInputLabel")}
               required
               sx={{ backgroundColor: "background.default", borderRadius: 1 }}
               InputLabelProps={{
@@ -70,7 +71,7 @@ export default function SubscribeForm() {
               loading={status === SubmitStatus.SUBMITTING}
               sx={{ flexShrink: 0 }}
             >
-              {BUTTON_LABEL}
+              {t("buttonLabel")}
             </LoadingButton>
           </>
         ) : (
@@ -80,14 +81,18 @@ export default function SubscribeForm() {
             icon={<CelebrationRoundedIcon fontSize="inherit" />}
             sx={{ flexGrow: 1 }}
           >
-            <AlertTitle>Guardado. ¡Gracias!</AlertTitle>
-            {`Avisaremos a ${email} cuando llegue el momento`}
+            <AlertTitle>{t("confirmationTitle")}</AlertTitle>
+            <Trans
+              ns="subscribeForm"
+              i18nKey="confirmationBody"
+              values={{ email }}
+            />
           </Alert>
         )}
       </Box>
       {status === SubmitStatus.ERROR && (
         <Alert severity="error" variant="filled">
-          An error ocurred
+          {t("defaultErrorMessage")}
         </Alert>
       )}
     </>

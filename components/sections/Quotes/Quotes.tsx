@@ -4,27 +4,7 @@ import Section from "../../shared/Section";
 import avatarImageGerardIzquierdo from "./avatar_gerard_izquierdo.png";
 import avatarImageRogerFornas from "./avatar_roger_fornas.png";
 import avatarImageAnnettKowalski from "./avatar_annett_kowalski.png";
-
-const QUOTES = [
-  {
-    name: "Annett Kowalski",
-    image: avatarImageAnnettKowalski,
-    content:
-      "Soy una apasionada del deporte en general, y siempre me gusta descubrir deportes nuevos que nunca he hecho antes. Si a eso le sumo el viajar, la combinación es perfecta.",
-  },
-  {
-    name: "Gerard Izquierdo",
-    image: avatarImageGerardIzquierdo,
-    content:
-      "Soy un fanático de los deportes acuáticos (waterpolo, natación, vela, windsurf…) y me encanta viajar. Llevaba mucho tiempo esperando algo como depor.travel. ¡No puedo esperar a vuestro lanzamiento oficial!",
-  },
-  {
-    name: "Roger Fornàs",
-    image: avatarImageRogerFornas,
-    content:
-      "He visitado varios países para hacer rutas de montaña, ya sea andando, ascendiendo a picos, corriendo o con bici de montaña. Tardaba semanas hasta encontrar opciones interesantes. ¿Dónde estaba depor.travel hasta ahora?",
-  },
-];
+import { useTranslation } from "next-i18next";
 
 const ColorMask = () => (
   <Box
@@ -45,6 +25,26 @@ const ColorMask = () => (
 );
 
 export default function Quotes() {
+  const { t } = useTranslation("quotes");
+
+  const QUOTES = [
+    {
+      name: "Annett Kowalski",
+      image: avatarImageAnnettKowalski,
+      content: t("annetQuote"),
+    },
+    {
+      name: "Gerard Izquierdo",
+      image: avatarImageGerardIzquierdo,
+      content: t("gerardQuote"),
+    },
+    {
+      name: "Roger Fornàs",
+      image: avatarImageRogerFornas,
+      content: t("rogerQuote"),
+    },
+  ];
+
   return (
     <Section backgroundColor={"transparent"}>
       <Container
