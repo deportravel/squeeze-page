@@ -7,6 +7,7 @@ import PublicRoundedIcon from "@mui/icons-material/PublicRounded";
 import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
 import SellRoundedIcon from "@mui/icons-material/SellRounded";
 import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
 
 function InformationItem({
   icon,
@@ -22,9 +23,6 @@ function InformationItem({
     </Box>
   );
 }
-
-const BUTTON_LABEL = "Más info";
-const BUTTON_LABEL_CLICKED = "Próximamente...";
 
 export default function TripCard({
   title,
@@ -43,6 +41,8 @@ export default function TripCard({
   dates: string;
   price: string;
 }) {
+  const { t } = useTranslation("tripCard");
+
   const [infoRequested, setInfoRequested] = useState(false);
   useEffect(() => {
     if (infoRequested) {
@@ -104,7 +104,7 @@ export default function TripCard({
             fullWidth
             onClick={() => setInfoRequested(true)}
           >
-            {infoRequested ? BUTTON_LABEL_CLICKED : BUTTON_LABEL}
+            {infoRequested ? t("buttonLabelClicked") : t("buttonLabel")}
           </Button>
         </Box>
       </Box>

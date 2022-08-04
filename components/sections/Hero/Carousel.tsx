@@ -1,12 +1,16 @@
 import { Box } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
+import { useEffect, useState, useMemo } from "react";
 import TripCard from "./TripCard";
-import trips from "./trips/list";
+import getTrips from "./trips/list";
 
 const positionOffset = 33;
 const scaleOffset = 0.2;
 
 export default function Carousel() {
+  const { t } = useTranslation("carouselTrips");
+  const trips = useMemo(() => getTrips(t), [t]);
+
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   useEffect(() => {

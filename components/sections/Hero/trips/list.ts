@@ -2,44 +2,46 @@ import runningDesertImage from "./62822ba60171aef418c1e96f_mela_home_page.png";
 import vietnamBiciImage from "./62b0991d5e8512787c2b8561_Vietnam_bici.jpeg";
 import tailandiaMotoImage from "./62b09738603339dad026c9a1_Tailandia_moto.jpeg";
 import yogaImage from "./628b3f7a4b5c7138822c6fbd_Yoga.jpeg";
+import { TFunction } from "next-i18next";
 
-const trips = [
-  {
-    title: "Carrera en las dunas de Jordania",
-    sport: "Running",
-    location: "Jordania",
-    dates: "19 - 25 septiembre 2022",
-    price: "Desde 863€",
-    image: runningDesertImage,
-    imageAlt: "Corredores en el desierto",
-  },
-  {
-    title: "Vietnam BTT 2022",
-    sport: "Ciclismo",
-    location: "Vietnam",
-    dates: "1 - 13 noviembre 2022",
-    price: "Desde 1479€",
-    image: vietnamBiciImage,
-    imageAlt: "Ciclistas en Vietnam",
-  },
-  {
-    title: "El triángulo de Oro y Nan en moto",
-    sport: "Automovilismo",
-    location: "Tailandia",
-    dates: "14 - 27 enero 2023",
-    price: "2950€",
-    image: tailandiaMotoImage,
-    imageAlt: "Tailandia",
-  },
-  {
-    title: "Retiro vegano de yoga y meditación en Agonda, Goa",
-    sport: "Yoha",
-    location: "India, Agonda, Goa",
-    dates: "15 - 24 enero 2023",
-    price: "Desde 765€",
-    image: yogaImage,
-    imageAlt: "Person doing yoga",
-  },
-];
-
-export default trips;
+export default function getTrips(t: TFunction) {
+  const trips = [
+    {
+      title: t("runningDunesJordania.title"),
+      sport: t("runningDunesJordania.sport"),
+      location: t("runningDunesJordania.location"),
+      dates: t("runningDunesJordania.dates"),
+      price: t("runningDunesJordania.price"),
+      image: runningDesertImage,
+      imageAlt: t("runningDunesJordania.imageAlt"),
+    },
+    {
+      title: t("vietnamVtt2022.title"),
+      sport: t("vietnamVtt2022.sport"),
+      location: t("vietnamVtt2022.location"),
+      dates: t("vietnamVtt2022.dates"),
+      price: t("vietnamVtt2022.price"),
+      image: vietnamBiciImage,
+      imageAlt: t("vietnamVtt2022.imageAlt"),
+    },
+    {
+      title: t("trianguloDeOroNanMoto.title"),
+      sport: t("trianguloDeOroNanMoto.sport"),
+      location: t("trianguloDeOroNanMoto.location"),
+      dates: t("trianguloDeOroNanMoto.dates"),
+      price: t("trianguloDeOroNanMoto.price"),
+      image: tailandiaMotoImage,
+      imageAlt: t("trianguloDeOroNanMoto.imageAlt"),
+    },
+    {
+      title: t("yogaMeditacionAgonda.title"),
+      sport: t("yogaMeditacionAgonda.sport"),
+      location: t("yogaMeditacionAgonda.location"),
+      dates: t("yogaMeditacionAgonda.dates"),
+      price: t("yogaMeditacionAgonda.price"),
+      image: yogaImage,
+      imageAlt: t("yogaMeditacionAgonda.imageAlt"),
+    },
+  ];
+  return trips;
+}
