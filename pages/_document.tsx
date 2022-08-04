@@ -6,7 +6,7 @@ const { publicRuntimeConfig } = getConfig();
 class MyDocument extends Document {
   render() {
     return (
-      <Html lang="es">
+      <Html>
         <Head>
           <link
             href={

@@ -10,6 +10,8 @@ import Section from "../../shared/Section";
 import StyledAppName from "../../shared/StyledAppName";
 import SubscribeForm from "../../shared/SubscribeForm";
 import Carousel from "./Carousel";
+import LanguageMenu from "./LanguageMenu";
+
 import Logo from "./Logo";
 import MoreContentArrow from "./MoreContentArrow";
 
@@ -22,6 +24,7 @@ export default function Hero() {
 
   return (
     <Section almostFullHeight>
+      <LanguageMenu />
       <Container
         maxWidth="md"
         sx={{
