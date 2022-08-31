@@ -4,6 +4,7 @@ import getConfig from "next/config";
 import { FormEvent, useRef, useState } from "react";
 import CelebrationRoundedIcon from "@mui/icons-material/CelebrationRounded";
 import { Trans, useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 const { publicRuntimeConfig } = getConfig();
 
@@ -16,6 +17,7 @@ enum SubmitStatus {
 
 export default function SubscribeForm() {
   const { t } = useTranslation("subscribeForm");
+  const router = useRouter();
 
   const [status, setStatus] = useState(SubmitStatus.IDDLE);
   const [email, setEmail] = useState("");
@@ -64,6 +66,7 @@ export default function SubscribeForm() {
                 setEmail(event.target.value);
               }}
             />
+            <input type="hidden" value={router.locale || ""} name="Locale" />
             <LoadingButton
               type="submit"
               variant="contained"
